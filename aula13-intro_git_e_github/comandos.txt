@@ -1,3 +1,0 @@
-ls - lista o conteúdo da pasta
-cd "caminho" - entra no destino
-mkdir "nome da pasta" - cria uma pasta

@@ -1,0 +1,74 @@
+🚀 Comandos Essenciais do Git
+1. Preparando e Salvando Alterações
+Depois de iniciar o repositório com git init, você usará estes comandos para salvar o seu progresso:
+
+git status
+
+O que faz: Mostra o estado atual do seu repositório. Ele te diz quais arquivos foram modificados, quais estão prontos para serem salvos e o que o Git ainda não está rastreando. É o comando que você mais vai digitar.
+
+git add <nome-do-arquivo>
+
+O que faz: Adiciona um arquivo específico para a "área de espera" (staging area). Significa que você está dizendo: "Git, separe esse arquivo para o próximo salvamento".
+
+git add .
+
+O que faz: Adiciona todos os arquivos modificados e novos da pasta atual de uma vez só para a área de espera.
+
+git commit -m "sua mensagem aqui"
+
+O que faz: Cria um "ponto de salvamento" (commit) definitivo com uma mensagem explicando o que você fez.
+
+2. Histórico e Verificação
+Para olhar para o passado e entender o que já foi feito:
+
+git log
+
+O que faz: Mostra o histórico de todos os commits feitos no projeto, com o autor, data e a mensagem de cada um. (Dica: aperte a tecla q para sair dessa tela se ela travar o terminal).
+
+git diff
+
+O que faz: Mostra exatamente o que mudou nas linhas de código desde o seu último commit.
+
+3. Ramificações (Branches)
+Para testar recursos novos sem estragar o código que já está funcionando:
+
+git branch
+
+O que faz: Lista todas as ramificações (branches) existentes no seu projeto.
+
+git checkout -b <nome-da-branch> (ou git switch -c <nome-da-branch>)
+
+O que faz: Cria uma nova ramificação e já muda você para dentro dela.
+
+git checkout <nome-da-branch> (ou git switch <nome-da-branch>)
+
+O que faz: Alterna entre as ramificações existentes.
+
+4. Conectando com a Nuvem (GitHub/GitLab)
+Para enviar o seu código para um repositório remoto:
+
+git remote add origin <url-do-repositorio>
+
+O que faz: Conecta a sua pasta local ao repositório vazio que você criou na nuvem (GitHub). Você só precisa rodar isso uma vez por projeto.
+
+git push -u origin <nome-da-branch>
+
+O que faz: Envia seus commits locais para o servidor remoto pela primeira vez. Nas próximas vezes, basta digitar apenas git push.
+
+git pull
+
+O que faz: Traz as novidades e atualizações que estão no repositório remoto para o seu computador.
+
+git clone <url-do-repositorio>
+
+O que faz: Baixa um projeto completo da internet para o seu computador (ele já vem configurado com o git init automaticamente).
+
+💡 Dica de ouro: O fluxo padrão que você vai repetir quase todo dia é o famoso combo:
+
+git status (para ver o que mudou)
+
+git add . (para selecionar tudo)
+
+git commit -m "Minha alteração" (para salvar)
+
+git push (para enviar para o GitHub)
