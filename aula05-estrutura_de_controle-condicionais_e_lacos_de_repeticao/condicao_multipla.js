@@ -71,3 +71,13 @@ switch (diaSemana) {
 // Se nenhum dos casos corresponder à expressão, o bloco de código do default será executado, se estiver presente.
 // O switch é útil quando temos várias condições para verificar,
 // e pode ser mais legível do que uma série de if-else aninhados.
+
+
+/* =====================================================================
+   RESUMO DA AULA:
+   - Estrutura Condicional Switch: Uma alternativa mais limpa e legível a múltiplos `if/else if` aninhados quando precisamos comparar uma única variável com vários valores possíveis.
+   - Casos (case) e Tipos de Dados: O `switch` avalia expressões de diferentes tipos, como números (`dia`), textos (`fruta`) e valores retornados por funções.
+   - A Importância do `break`: Essencial em cada caso para interromper a execução do bloco após encontrar a correspondência. Sem ele, o JavaScript continuará executando os casos seguintes de forma cascata (fall-through).
+   - Cláusula `default`: Funciona como o `else` final, sendo executada caso nenhuma das opções anteriores (`case`) coincida com o valor avaliado.
+   - Objeto Date nativo: Introdução prática ao método `new Date().getDay()`, que retorna o dia da semana atual mapeado de forma numérica de 0 (Domingo) a 6 (Sábado).
+   ===================================================================== */

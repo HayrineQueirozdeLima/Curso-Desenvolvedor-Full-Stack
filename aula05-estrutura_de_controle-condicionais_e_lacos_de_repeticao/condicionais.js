@@ -24,3 +24,11 @@ if (nota >= 90) {
 } else {
   console.log("Insuficiente");
 }
+
+/* =====================================================================
+   RESUMO DA AULA:
+   - Tomada de Decisão: Introdução ao controle de fluxo, permitindo que o software execute caminhos diferentes baseando-se em testes lógicos.
+   - Estrutura if/else básico: Executa uma ação principal se a condição for verdadeira (`if`), e define um caminho alternativo obrigatório caso seja falsa (`else`).
+   - Encadeamento com else if: Solução ideal para avaliar múltiplas condições exclusivas em sequência. O JavaScript testa de cima para baixo e para na primeira condição que for verdadeira.
+   - Panorama de Condicionais: O código também recapitula conceitualmente que o `switch` (visto anteriormente) e o operador ternário completam o leque de ferramentas para tratar desvios de fluxo no JavaScript.
+   ===================================================================== */

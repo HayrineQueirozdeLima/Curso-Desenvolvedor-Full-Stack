@@ -100,7 +100,7 @@ let aluno = {
         numero: 123,
         cidade: "São Paulo"
     },
-    apresentar: function() { // Método do objeto
+    apresentar: function () { // Método do objeto
         console.log(`Olá, meu nome é ${this.nome} e tenho ${this.idade} anos.`);
     }// "this" é uma palavra-chave que se refere ao objeto atual, permitindo acessar suas propriedades dentro do método.
 };
@@ -112,3 +112,15 @@ console.log(aluno.cursos[1]);// Acessando o segundo elemento do array "cursos" d
 console.log(aluno.endereco.cidade);// Acessando a propriedade "cidade" do objeto "endereco" dentro do objeto "aluno"
 console.log(aluno["endereco"]["rua"]);// Acessando a propriedade "rua" do objeto "endereco" usando notação de colchetes
 aluno.apresentar();// Chamando o método "apresentar" do objeto "aluno"
+
+
+/* =====================================================================
+   RESUMO DA AULA:
+   - Estrutura de Objetos: Coleções de dados complexos organizados em pares de chave (nome) e valor. Servem para modelar entidades e dados estruturados no JavaScript.
+   - Propriedades vs. Métodos: Quando o valor associado a uma chave é um tipo de dado comum (string, número, etc.), chamamos de propriedade. Quando o valor é uma função que executa uma ação, chamamos de método.
+   - O Conceito do `this`: Palavra-chave contextual fundamental. Dentro de um método de objeto, o `this` referencia o próprio objeto executor, permitindo recuperar ou modificar seus próprios atributos de forma dinâmica.
+   - Notações de Acesso: Demonstração prática de como ler valores utilizando a Notação de Ponto (`aluno.nome`) e a Notação de Colchetes (`aluno["endereco"]["rua"]`). Esta última é vital quando precisamos usar chaves dinâmicas armazenadas em variáveis.
+   - Estruturas Aninhadas (Nesting):
+     - Objetos Aninhados: Embutir um objeto dentro de outro (como `endereco` em `aluno`) para representar hierarquias claras.
+     - Arrays Aninhados: Listas dentro de objetos (como `cursos` ou coleções de objetos como a lista de `alunos` da escola), permitindo criar estruturas de dados complexas similares a tabelas de banco de dados e APIs REST (JSON).
+   ===================================================================== */

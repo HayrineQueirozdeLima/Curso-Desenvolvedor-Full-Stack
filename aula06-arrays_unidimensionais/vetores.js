@@ -68,3 +68,18 @@ e o for of é específico para arrays e outros objetos
 iteráveis. O for in percorre os índices ou chaves, 
 enquanto o for of percorre os valores diretamente.
 */
+
+/* =====================================================================
+   RESUMO DA AULA:
+   - Conceito de Array (Vetores): Estrutura de dados que armazena uma coleção ordenada de elementos. O acesso a cada item é feito através de índices numéricos que começam obrigatoriamente no 0.
+   - Dinamismo e Heterogeneidade: No JavaScript, os arrays possuem tamanho dinâmico (crescem e diminuem conforme a necessidade) e aceitam múltiplos tipos de dados misturados em uma mesma estrutura (números, strings, booleanos, objetos e até outros arrays).
+   - Métodos e Propriedades Essenciais:
+     - `.length`: Retorna a quantidade total de elementos presentes no momento.
+     - `.push()`: Adiciona de forma prática um novo elemento ao final da lista.
+     - `.pop()`: Remove o último elemento da lista.
+   - Métodos de Iteração (Loops para Arrays):
+     - `for` tradicional: Dá flexibilidade máxima para definir o início, fim e o passo da contagem.
+     - `.forEach()`: Uma abordagem mais moderna e funcional para executar uma função diretamente para cada elemento do array.
+     - `for...in`: Focado em percorrer as chaves ou os *índices* do array.
+     - `for...of`: Focado em extrair diretamente os *valores* de cada posição, sendo a opção mais limpa quando os índices não são necessários para a lógica do código.
+   ===================================================================== */

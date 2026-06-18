@@ -36,7 +36,7 @@ function soma_aula(a, b) {
     */
 
     if ((a + b) > 6) {
-        return "Aprovaddo"; 
+        return "Aprovaddo";
     } else {
         return "Reprovado";
     }
@@ -52,7 +52,7 @@ Instruções:
  Criar uma função que receba três parâmetros (nota1, nota2,nota3);
 A função deve calcular a média das três notas e retornar o valor;
 Chamar a função e exibir a média no console. 
-*/ 
+*/
 // function media3Notas(nota1, nota2, nota3){
 // let media = (nota1 + nota2 + nota3)/3;
 
@@ -61,13 +61,13 @@ Chamar a função e exibir a média no console.
 
 // console.log(media3Notas(20,80,60));
 // está correta a função, mas o resultado da média é 53.333333333333336, o que pode ser arredondado para 53.33 usando a função toFixed(2) para limitar a duas casas decimais.
-function media3Notas(nota1, nota2, nota3){
-let media = (nota1 + nota2 + nota3)/3;
-media = media.toFixed(2);
-return media;
+function media3Notas(nota1, nota2, nota3) {
+    let media = (nota1 + nota2 + nota3) / 3;
+    media = media.toFixed(2);
+    return media;
 }
 
-console.log(media3Notas(20,80,60));
+console.log(media3Notas(20, 80, 60));
 
 
 /*
@@ -78,7 +78,7 @@ Criar uma função chamada calculadora que receba três parâmetros: num1, num2 
 O operador pode ser um dos seguintes: + (soma), - (subtração), *(multiplicação), / (divisão);
 A função deve retornar o resultado da operação;
 Chamar a função com diferentes operadores e exibir os resultados no console.
-*/ 
+*/
 
 //switch case, funciona assim: o switch avalia a expressão (no caso, o operador) e compara com os casos definidos. Quando encontra um caso que corresponde à expressão, ele executa o bloco de código associado a esse caso. Se nenhum caso corresponder, ele pode executar um bloco de código padrão (default).
 //exemplo de switch case
@@ -95,23 +95,32 @@ Chamar a função com diferentes operadores e exibir os resultados no console.
 //         return "Operador inválido";
 // }
 
-function fazerConta(n1, n2, operador){
- switch (operador){
-case "+":
-return n1+n2;
-case "-":
-return n1-n2;
-case "/":
-return n1/n2;
-case "*":
-return n1*n2;
-default:
-return "Operador inválido! Por favor, defina '+', '-', '/', ou '*'.";
-}
+function fazerConta(n1, n2, operador) {
+    switch (operador) {
+        case "+":
+            return n1 + n2;
+        case "-":
+            return n1 - n2;
+        case "/":
+            return n1 / n2;
+        case "*":
+            return n1 * n2;
+        default:
+            return "Operador inválido! Por favor, defina '+', '-', '/', ou '*'.";
+    }
 }
 
-console.log(fazerConta(2,2,"+"));
-console.log(fazerConta(2,2,"-"));
-console.log(fazerConta(2,2,"/"));
-console.log(fazerConta(2,2,"*"));
-console.log(fazerConta(2,2,"%"));
+console.log(fazerConta(2, 2, "+"));
+console.log(fazerConta(2, 2, "-"));
+console.log(fazerConta(2, 2, "/"));
+console.log(fazerConta(2, 2, "*"));
+console.log(fazerConta(2, 2, "%"));
+
+/* =====================================================================
+   RESUMO DA AULA:
+   - O que são Funções: Blocos de código projetados para executar tarefas específicas, fundamentais para a organização, reaproveitamento e legibilidade do sistema.
+   - Parâmetros e Argumentos: Variáveis locais que funcionam como "espaços reservados" na declaração da função para receber dados externos dinâmicos no momento da chamada.
+   - Comportamento do `return`: Determina a saída/resultado final da função. Um ponto crítico aprendido é que o `return` encerra a execução da função imediatamente; qualquer linha de código colocada abaixo dele dentro do mesmo bloco se torna "código morto" (inacessível).
+   - Métodos Utilitários Nativos: Uso de recursos matemáticos globais como `Math.PI` e o método `.toFixed(2)`, ideal para tratar dízimas periódicas e formatar números limitando as casas decimais.
+   - Funções com Estruturas Condicionais: Integração de lógica de negócios dentro de funções utilizando `if/else` e `switch`. Nota técnica: Quando usamos `return` diretamente dentro dos `cases` de um `switch`, a palavra-chave `break` torna-se desnecessária, pois o `return` já interrompe e sai de toda a função.
+   ===================================================================== */

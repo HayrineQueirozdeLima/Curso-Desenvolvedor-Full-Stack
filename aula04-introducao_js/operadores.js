@@ -114,7 +114,7 @@ console.log(!(numero2 > 0)); // true, porque numero2 não é maior que 0, então
 */
 let idade = 18;
 let mensagem =
-  idade >= 18 ? "Você é maior de idade." : "Você é menor de idade.";
+    idade >= 18 ? "Você é maior de idade." : "Você é menor de idade.";
 console.log(mensagem); // "Você é maior de idade."
 
 //operadores de comparação e operadores lógicos podem ser combinados para criar expressões mais complexas. Por exemplo, podemos verificar se um número está dentro de um intervalo usando operadores de comparação e o operador lógico E:
@@ -124,11 +124,21 @@ console.log(numero3 > 0 && numero3 < 10); // true, porque numero3 é maior que 0
 //operadores ternarios também podem ser aninhados para criar expressões mais complexas. Por exemplo, podemos usar um operador ternário dentro de outro para verificar múltiplas condições:
 let nota = 85;
 let resultado =
-  nota >= 90
-    ? "Excelente"
-    : nota >= 80
-      ? "Bom"
-      : nota >= 70
-        ? "Regular"
-        : "Insuficiente";
+    nota >= 90
+        ? "Excelente"
+        : nota >= 80
+            ? "Bom"
+            : nota >= 70
+                ? "Regular"
+                : "Insuficiente";
 console.log(resultado); // "Bom", porque a nota é maior ou igual a 80, mas menor que 90
+
+/* =====================================================================
+   RESUMO DA AULA:
+   - Operadores Aritméticos: Usados para cálculos matemáticos (+, -, *, /, %, **).
+   - Operadores de Atribuição: Atualizam o valor de uma variável de forma abreviada (ex: +=, *=).
+   - Operadores de Incremento/Decremento: Aumentam (++) ou diminuem (--) o valor em 1. A ordem importa: `a++` usa o valor antes de incrementar, enquanto `++a` incrementa antes de usar.
+   - Operadores Relacionais: Fazem comparações e retornam verdadeiro ou falso. Ponto chave: `==` compara apenas o valor, enquanto `===` (igualdade estrita) compara o valor E o tipo de dado (prática recomendada).
+   - Operadores Lógicos: Permitem combinar condições (`&&` para E, `||` para OU) ou inverter o valor lógico (`!` para NÃO).
+   - Operador Ternário: É um atalho para a estrutura `if/else`, escrito na forma `condição ? valor_verdadeiro : valor_falso`. Pode ser aninhado para avaliar múltiplas condições em sequência.
+   ===================================================================== */

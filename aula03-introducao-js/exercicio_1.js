@@ -12,3 +12,11 @@ if (true) {
 }
 
 console.log(mensagem); // Isso causará um erro, pois a variável mensagem não está acessível fora do bloco onde foi declarada.
+
+
+/* =====================================================================
+   RESUMO DA AULA:
+   - Tipos Primitivos: Armazenamento de dados básicos como números (`number`), textos (`string`) e valores lógicos (`boolean`).
+   - Declaração e Reatribuição: Diferença entre variáveis que podem ter seus valores alterados (`var` e `let`) e constantes que são imutáveis (`const`).
+   - Escopo de Variáveis: O conceito fundamental de que `var` possui escopo de função (abrangente e menos seguro) e `let`/`const` possuem escopo de bloco (restritos às chaves `{}` onde foram criados). O erro gerado no final do código ilustra na prática como o escopo de bloco protege os dados de acessos indevidos externos.
+   ===================================================================== */

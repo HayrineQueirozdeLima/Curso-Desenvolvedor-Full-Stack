@@ -80,13 +80,13 @@ let aluno2 = {
     nome: "João",
     idade: 20,
     nota: 8.5,
-    atualizarNota: function(novaNota) { // Método para atualizar a nota do aluno
+    atualizarNota: function (novaNota) { // Método para atualizar a nota do aluno
         this.nota = novaNota; // "this" se refere ao objeto atual, permitindo acessar e modificar a propriedade "nota"
     },
     nome: "Maria",
     idade: 25,
     nota: 7.5,
-    atualizarNota: function(novaNota) { // Método para atualizar a nota do aluno
+    atualizarNota: function (novaNota) { // Método para atualizar a nota do aluno
         this.nota = novaNota; // "this" se refere ao objeto atual, permitindo acessar e modificar a propriedade "nota"
     },
 };
@@ -105,7 +105,20 @@ for (let [chave, valor] of Object.entries(aluno2)) {
     console.log(`${valor.idade}`); // Imprime o valor da propriedade "idade" do objeto "aluno2" para cada chave-valor do objeto
 }// O loop for...of é usado para iterar sobre os elementos do array retornado por Object.entries(aluno2),
 // onde cada elemento é um array contendo uma chave e seu valor correspondente do objeto "aluno2".
-// Dentro do loop, estamos acessando as propriedades "nome" e "idade" do valor (que é o objeto "aluno2") e imprimindo seus valores no console. 
-// No entanto, como estamos iterando sobre as entradas do objeto, o valor de "valor" será o mesmo para cada iteração, 
-// resultando na impressão repetida das mesmas informações do aluno. 
+// Dentro do loop, estamos acessando as propriedades "nome" e "idade" do valor (que é o objeto "aluno2") e imprimindo seus valores no console.
+// No entanto, como estamos iterando sobre as entradas do objeto, o valor de "valor" será o mesmo para cada iteração,
+// resultando na impressão repetida das mesmas informações do aluno.
 // Para acessar as propriedades corretamente, seria necessário verificar a chave antes de acessar os valores correspondentes.
+
+
+/* =====================================================================
+   RESUMO DA AULA:
+   - Estruturas de Dados Complexas: Aprendemos a combinar Arrays e Objetos em múltiplos níveis de aninhamento (Arrays que contêm Objetos, que contêm propriedades, métodos, novos sub-objetos e sub-arrays). Essa é a base de dados reais consumidos na web (padrão JSON).
+   - Manipulação de Strings em Arrays: Introdução ao método `.join(", ")`, que pega os elementos de um array (como as notas) e os une em uma única linha de texto separada pelo caractere escolhido.
+   - Iteração Avançada e o Método `.map()`: Além dos loops tradicionais (`for`, `for...of`, `for...in`), vimos o `.map()`. Embora ele sirva para transformar dados gerando um novo array, aqui ele atuou como um iterador de leitura das propriedades.
+   - Métodos Construtores de Objetos (`Object.entries`): Transforma um objeto em um array bidimensional de pares chave/valor `[chave, valor]`, permitindo o uso de desestruturação dentro do loop `for...of`.
+   
+   - PONTO DE ATENÇÃO (Dica de amigo): 
+     1. Em JavaScript, objetos não aceitam chaves duplicadas. Ao declarar `nome` e `idade` duas vezes dentro do literal de `aluno2`, as propriedades da "Maria" apagaram e sobrescreveram completamente os dados do "João".
+     2. No último loop `for...of` com `Object.entries()`, a variável `valor` recebe o dado primitivo diretamente (como a string "Maria" ou o número 25). Tentar acessar `valor.nome` resultará em `undefined`, pois strings e números não possuem uma propriedade chamada `.nome`. Para exibir os dados corretamente, o console deveria ler apenas a variável `valor` nas iterações adequadas.
+   ===================================================================== */

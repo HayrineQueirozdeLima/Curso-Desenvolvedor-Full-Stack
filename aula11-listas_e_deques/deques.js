@@ -37,3 +37,16 @@ class Deque {
 };
 
 const deque = new Deque();
+
+/* =====================================================================
+   RESUMO DA AULA:
+   - Estrutura de Dados Deque (Double-Ended Queue): Uma fila de duas extremidades que flexibiliza as regras tradicionais de filas (FIFO) e pilhas (LIFO), permitindo inserir e remover dados tanto pelo início quanto pelo fim.
+   - Manipulação de Arrays em Baixo Nível: Entendimento prático de quatro métodos fundamentais do JavaScript para alteração de arrays:
+     - `.unshift()`: Adiciona elementos na primeira posição (frente).
+     - `.push()`: Adiciona elementos na última posição (fim).
+     - `.shift()`: Remove e retorna o primeiro elemento.
+     - `.pop()`: Remove e retorna o último elemento.
+   - Programação Orientada a Objetos (POO): Implementação do Deque utilizando o modelo de classes (`class`), encapsulando o array de dados dentro do `constructor` e gerenciando seu estado interno através do `this.itens`.
+   - Reutilização de Métodos: Demonstração de boas práticas com o método `prioridade()`, que reaproveita a lógica interna de `adicionarFrente()` sem duplicar código.
+   - Formatação de Saída: Uso do método `.join(' <-> ')` para criar uma representação visual clara e intuitiva das conexões bidirecionais do Deque no console.
+   ===================================================================== */

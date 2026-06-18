@@ -150,3 +150,14 @@ console.log("Tamanho:", fila.tamanho())   // 1
 console.log("\nDequeue:", fila.dequeue()) // 30
 console.log("Fila vazia?", fila.estaVazia()) // true
 console.log("Dequeue em fila vazia:", fila.dequeue()) // null
+
+/* =====================================================================
+   RESUMO DA AULA:
+   - Fila com Lista Encadeada (Linked List): Uma abordagem avançada que substitui o uso de Arrays nativos. A principal vantagem é que a remoção do primeiro elemento não exige o rearranjo ("reindexação") de todos os outros itens na memória.
+   - Conceito de Nó (Node): Unidade fundamental da lista encadeada, responsável por guardar o dado bruto (`value`) e a referência de memória para o próximo bloco da estrutura (`next`).
+   - A Estratégia dos Dois Ponteiros (Front e Rear): 
+     - Mantendo uma referência direta para o início (`front`), conseguimos remover elementos (`dequeue`) instantaneamente.
+     - Mantendo uma referência direta para o fim (`rear`), conseguimos inserir novos elementos (`enqueue`) diretamente no término da estrutura.
+   - Complexidade de Tempo O(1) Constante: Graças ao ponteiro `rear` e à propriedade `size`, operações como inserção, remoção e checagem de tamanho rodam instantaneamente, independentemente de a fila ter 3 ou 3 milhões de elementos, eliminando loops de busca O(n).
+   - Gerenciamento Manual de Memória Lógica: Diferente dos arrays, precisamos garantir manualmente que o ponteiro `rear` seja limpo (`null`) quando o último elemento for removido da fila, evitando referências fantasmas a nós excluídos.
+   ===================================================================== */
