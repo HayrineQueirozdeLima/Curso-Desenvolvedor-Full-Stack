@@ -1,0 +1,69 @@
+body{
+    background-color: rgb(202, 189, 154);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-size: 25px;
+    text-align: justify;
+}
+
+h1{
+    font-size: 32px;
+    text-align: center;
+    color: blue;
+}
+
+.card{
+   background-color: white; 
+   width: 500px;
+   height: auto;
+   margin: 50px auto; /*espaçamento externo */
+   padding: 30px; /*espaçamento interno */
+   border: 2px solid black;
+}
+
+.card h1{
+    color: black;
+}
+
+h2{
+    color: aqua;
+}
+
+#texto{
+   font-size: 10px; 
+}
+
+#texto2{
+    color: blue;
+}
+
+/* ==================================================================
+RESUMO DA AULA: SELETORES AVANÇADOS E BOX MODEL (MODELO DE CAIXA)
+==================================================================
+Nesta aula, avançamos para a estruturação profissional de páginas, 
+aprendendo a controlar o espaço dos elementos e a criar regras 
+de estilo muito mais específicas.
+
+Conceitos-Chave:
+1. Seletores de Classe (.card): Criam estilos reutilizáveis que 
+   podem ser aplicados a vários elementos no HTML.
+2. Seletores de ID (#texto): Estilos únicos para elementos 
+   exclusivos. Possuem prioridade máxima de aplicação.
+3. Seletor Descendente (.card h1): Aplica o estilo no h1 APENAS 
+   se ele estiver dentro de uma tag com a classe .card.
+4. Box Model (Modelo de Caixa): Todo elemento web é uma caixa. 
+   Controlamos essa caixa usando largura, altura, borda e espaços.
+
+------------------------------------------------------------------
+PRINCIPAIS NOVOS COMANDOS APRENDIDOS:
+------------------------------------------------------------------
+* font-family:   -> Define a fonte do texto (ex: Arial) e suas alternativas.
+* width / height -> Controlam a largura (500px) e altura (auto) da caixa.
+* padding:       -> Espaçamento INTERNO (afasta o texto da borda do card).
+* margin:        -> Espaçamento EXTERNO. O truque '50px auto' cria 50px de 
+                    espaço上下 (cima/baixo) e CENTRALIZA o card na tela.
+* border:        -> Cria uma linha de borda (Espessura | Estilo | Cor).
+==================================================================
+*/

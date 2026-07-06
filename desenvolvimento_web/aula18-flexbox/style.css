@@ -1,0 +1,46 @@
+.caixa{
+    background-color: aquamarine;
+    padding: 30px;
+    margin: 10px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    background-color: bisque;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap-reverse;
+}
+
+/* ==================================================================
+RESUMO DA AULA: INTRODUÇÃO AO CSS FLEXBOX (LAYOUT FLEXÍVEL)
+==================================================================
+Nesta aula, aprendemos o poder do Flexbox para posicionar elementos.
+O Flexbox funciona com o conceito de Container (mãe) e Itens (filhos).
+Ao aplicar 'display: flex' no container, ganhamos superpoderes para
+alinhar as caixas internas facilmente em dois eixos (Eixo Principal 
+e Eixo Cruzado).
+
+Conceitos-Chave:
+1. Eixos: O alinhamento depende da direção ('flex-direction'). Se for
+   'row' (linha), o horizontal é o principal e o vertical é o cruzado.
+2. Quebra de Linha (Wrap): Permite que os itens pulem para a próxima 
+   linha caso faltar espaço na tela, ideal para telas de celular.
+
+------------------------------------------------------------------
+PRINCIPAIS NOVOS COMANDOS APRENDIDOS (FLEXBOX):
+------------------------------------------------------------------
+* display: flex;          -> Ativa o modo Flexbox no elemento container.
+* flex-direction: row;    -> Organiza os itens em linha (um ao lado do outro).
+* align-items: center;    -> Alinha os itens verticalmente no CENTRO.
+* justify-content: center;-> Alinha os itens horizontalmente no CENTRO.
+* gap: 20px;              -> Cria um espaçamento automático e igual de 
+                             20px entre os itens (caixas).
+* flex-wrap: wrap-reverse;-> Permite que os itens quebrem linha se faltar 
+                             espaço, mas empilhando as novas linhas 
+                             de BAIXO para CIMA (invertido).
+==================================================================
+*/
