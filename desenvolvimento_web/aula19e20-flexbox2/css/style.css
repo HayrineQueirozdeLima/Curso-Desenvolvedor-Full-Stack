@@ -1,0 +1,131 @@
+/* Reset Global */
+* {
+   margin: 0;
+   padding: 0; 
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f1f1f1;
+}
+
+/* Cabeçalho com Flexbox Espaçado */
+.cabecalho {
+    background-color: #222;
+    color: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Empurra Título para a esquerda e Menu para a direita */
+    align-items: center;
+}
+
+.menu {
+   display: flex;
+   gap: 20px; 
+}
+
+.menu a {
+   color: #f1f1f1;
+   text-decoration: none; 
+}
+
+/* Interatividade nos Links do Menu */
+.menu a:hover {
+    text-decoration: underline;
+    transform: scale(1.20); /* Efeito de crescimento sutil */
+    color: #1E90FF;
+}
+
+/* Container de Cards com quebra de linha automática */
+.cards {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Estilização Individual dos Produtos (Box Model + Arredondamento) */
+.produtos {
+    background-color: #FFF0F5;
+    width: 250px;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Cantos arredondados modernos */
+}
+
+.produtos h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.produtos p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.produtos button {
+    padding: 10px;
+    background-color: #222;
+    color: #f1f1f1;
+    cursor: pointer; /* Feedback visual de clique */
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #222;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.rodape p {
+    font-size: 10px;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 15px;
+}
+
+.redes-sociais img {
+    width: 25px;
+}
+
+/* ==================================================================
+RESUMO DA AULA: LAYOUT COMPLETO, INTERATIVIDADE E DESIGN MODERNO
+==================================================================
+Nesta aula, juntamos todas as peças do quebra-cabeça! Construímos a 
+estilização completa de uma página comercial (E-commerce), focando 
+em usabilidade, design moderno e na experiência do usuário.
+
+Conceitos-Chave:
+1. CSS Reset (*): Aprendemos a zerar as margens e paddings padrões 
+   que os navegadores colocam sozinhos. Isso dá controle total do layout.
+2. Cores Hexadecimais (#222, #f1f1f1): Deixamos os nomes de cores em 
+   inglês de lado e passamos a usar códigos profissionais de cores.
+3. Pseudo-classes e Animação (:hover): Criamos vida na página! O site 
+   agora reage quando o usuário passa o mouse por cima dos links.
+4. Distribuição com Flexbox: Usamos o 'space-between' para empurrar 
+   elementos para os cantos opostos (como a logo de um lado e o menu do outro).
+
+------------------------------------------------------------------
+PRINCIPAIS NOVOS COMANDOS APRENDIDOS:
+------------------------------------------------------------------
+* * { ... }                 -> Seletor Universal. Aplica a regra a TODAS 
+                               as tags da página (usado para o Reset).
+* justify-content: space-between; -> Alinha os itens jogando o primeiro 
+                               para o início e o último para o fim.
+* border-radius: 5px;       -> Arredonda os cantos das caixas (cards).
+* :hover                    -> Pseudo-classe que ativa um estilo APENAS 
+                               quando o mouse passa sobre o elemento.
+* transform: scale(1.20);   -> Efeito de zoom/escala. Aumenta o elemento 
+                               em 20% durante o hover.
+* text-decoration: none/underline; -> Remove ou adiciona a linha sublinhada 
+                               do link.
+* cursor: pointer;          -> Transforma a seta do mouse na "mãozinha" 
+                               de clique (essencial para botões).
+==================================================================
+*/
