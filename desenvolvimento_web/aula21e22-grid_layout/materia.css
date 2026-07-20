@@ -78,7 +78,7 @@ body {
   padding: 16px 0;
 }
 
-.tilha a {
+.trilha a {
   text-decoration: none;
   color: var(--cor-suave);
 }
@@ -163,13 +163,13 @@ body {
 }
 
 .compartilhar button {
-  background-color: none;
+  background: none;
   font-family: var(--fonte-ui);
   font-size: 13px;
   padding: 8px 14px;
   border-radius: 20px;
   text-decoration: none;
-  border: 1px solid var(--cor-texo);
+  border: 1px solid var(--cor-texto);
   cursor: pointer;
 }
 
@@ -282,3 +282,24 @@ body {
   border: none;
   cursor: pointer;
 }
+
+/*
+========================================================================
+RESUMO E REVISÃO: ESTILIZAÇÃO E LAYOUT (CSS GRID + FLEXBOX)
+========================================================================
+
+RESUMO DOS CONCEITOS APLICADOS:
+
+1. Variáveis CSS (:root):
+   - Centralização de temas (cores, fontes, espaçamentos).
+   - Facilita a manutenção: alterar uma variável atualiza o site todo.
+
+2. Layout (Grid + Flexbox):
+   - CSS Grid: Utilizado para a estrutura macro (conteúdo principal vs lateral).
+   - Flexbox: Ideal para componentes internos (cabeçalho, navegação, autores).
+   - Abordagem "Mobile First" e responsividade com unidades relativas (ch, %, fr).
+
+3. UX (Experiência do Usuário):
+   - Position: sticky para manter o menu e cabeçalho sempre visíveis.
+   - Max-width: 65ch para otimizar a legibilidade do texto.
+*/

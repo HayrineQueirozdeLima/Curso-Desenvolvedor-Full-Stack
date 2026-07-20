@@ -1,176 +1,216 @@
 * {
-    margin: 0;
-    /* border: 1px solid grey; */
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  /* border: 1px solid grey; */
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #1a1a1a;
-    background-color: #eceae5;
-    display: grid;
-    
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: 
-    "cabecalho cabecalho" 
-    "principal lateral" 
+body {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  color: #1a1a1a;
+  background-color: #eceae5;
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "cabecalho cabecalho"
+    "principal menu-lateral"
     "rodape rodape";
-    gap: 20px; 
-    
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-} 
+  gap: 20px;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
 .principal {
-    grid-area: principal;
+  grid-area: principal;
 }
 .menu-lateral {
-    grid-area: menu-lateral;
+  grid-area: menu-lateral;
 }
 .rodape {
-    grid-area: rodape;
-    background-color: #1a1a1a;
-    color: #ffffff;
-    text-align: center;
-    padding: 18px;
-    border-radius: 8px 0;
-    font-family: Arial, helvetica, sans-serif;
-    font-size: 14px;
+  grid-area: rodape;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 18px;
+  border-radius: 8px 0;
+  font-family: Arial, helvetica, sans-serif;
+  font-size: 14px;
 }
 
 .cabecalho {
-    grid-area: cabecalho;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 16px;
-    border-bottom: 1px solid #1a1a1a;
+  grid-area: cabecalho;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #1a1a1a;
 }
 
-.logo{
-    font-size: 26px;
-    font-weight: bold;
+.logo {
+  font-size: 26px;
+  font-weight: bold;
 }
 
-.navegacao{
-    display: flex;
-    gap: 22px;
+.navegacao {
+  display: flex;
+  gap: 22px;
 }
 
-.navegacao a{
-    text-decoration: none;
-    color: #1a1a1a;
-    font-family: Arial, helvetica, sans-serif;
-    font-size: 15px;
+.navegacao a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-family: Arial, helvetica, sans-serif;
+  font-size: 15px;
 }
 
-.navegacao a:hover{
-    color:#c0392b;
+.navegacao a:hover {
+  color: #c0392b;
 }
 
 /* noticia destaque */
 
-.destaque{
-    background-color: #ffffff;
-    padding: 24px;
-    border-radius: 8px;
+.destaque {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
 }
 
-.destaque h1{
-    font-size: 22px;
-    margin: 10px 0;
+.destaque h1 {
+  font-size: 22px;
+  margin: 10px 0;
 }
 
-.resumo{
-    color: #555;
-    font-size: 17px;
+.resumo {
+  color: #555;
+  font-size: 17px;
 }
 
-.categoria{
-    display: inline-block;
-    background-color: #c0392b;
-    color: #ffffff;
-    font-family: Arial, helvetica, sans-serif;
-    font-size: 12px;
-    padding: 3px 8px;
-    text-transform: uppercase;
-    border-radius: 3px;
+.categoria {
+  display: inline-block;
+  background-color: #c0392b;
+  color: #ffffff;
+  font-family: Arial, helvetica, sans-serif;
+  font-size: 12px;
+  padding: 3px 8px;
+  text-transform: uppercase;
+  border-radius: 3px;
 }
 
 /* Grid de noticias */
 
-.meta{
-    display: flex;
-    gap: 16px;
-    margin-top: 14px;
-    font-family: Arial, helvetica, sans-serif;
-    font-size: 13px;
-    color: #888;
+.meta {
+  display: flex;
+  gap: 16px;
+  margin-top: 14px;
+  font-family: Arial, helvetica, sans-serif;
+  font-size: 13px;
+  color: #888;
 }
 
-.grade-noticias{
-    display: grid;
-    grid-template-columns: repeat(autofit, minmax(220px, 1fr));
-    gap: 16px;
-    margin-top: 20px;
+.grade-noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
 }
 
-.cartao{
-    background-color: #ffffff;
-    padding: 18px;
-    border-radius: 8px;
+.cartao {
+  background-color: #ffffff;
+  padding: 18px;
+  border-radius: 8px;
 }
 
-.cartao h2{
-    font-size: 18px;
-    margin: 8px 0;
+.cartao h2 {
+  font-size: 18px;
+  margin: 8px 0;
 }
 
-.cartao p{
-    color: #555;
-    font-size: 15px;
+.cartao p {
+  color: #555;
+  font-size: 15px;
 }
 
 /* barra lateral */
 
-.menu-lateral{
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
+.menu-lateral {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
 }
 
-.menu-lateral h3{
-    border-bottom: 1px solid #c0392b;
-    padding-bottom: 8px;
-    margin-bottom: 12px;
+.menu-lateral h3 {
+  border-bottom: 1px solid #c0392b;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
 }
 
-.menu-lateral ol{
-    padding-left: 20px;
+.menu-lateral ol {
+  padding-left: 20px;
 }
 
-.menu-lateral li{
-    margin-bottom: 12px;
-    font-size: 15px;
+.menu-lateral li {
+  margin-bottom: 12px;
+  font-size: 15px;
 }
 
 /* responsividade */
 
 @media (max-width: 768px) {
-    body {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "cabecalho"
-        "principal"
-        "menu-lateral"
-        "rodape";
-    }
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "cabecalho"
+      "principal"
+      "menu-lateral"
+      "rodape";
+  }
 
-    .cabecalho {
-        flex-direction: column;
-        /* align-items: flex-start; */
-        gap: 12px;
-    }
+  .cabecalho {
+    flex-direction: column;
+    /* align-items: flex-start; */
+    gap: 12px;
+  }
 }
+
+/*
+========================================================================
+RESUMO E REVISÃO: ESTILIZAÇÃO E LAYOUT (CSS GRID + FLEXBOX)
+========================================================================
+
+RESUMO DA AULA:
+Nesta etapa, focamos na "arquitetura" da página através do CSS Grid Layout. 
+Utilizamos uma abordagem de duas dimensões para definir as áreas principais 
+(Cabeçalho, Conteúdo Principal, Barra Lateral e Rodapé). Também consolidamos 
+o uso de Flexbox para componentes internos e implementamos responsividade 
+usando Media Queries.
+
+REVISÃO DOS CONCEITOS APRENDIDOS:
+
+1. CSS Grid (Layout Global):
+   - Grid Areas: Uma forma visual e poderosa de nomear seções. Ao usar 
+     grid-template-areas, você mapeia a página como um diagrama, facilitando 
+     a manutenção.
+   - Unidades Fracionais (fr): Essenciais para layouts modernos. Eles 
+     distribuem o espaço disponível de forma proporcional, dispensando cálculos 
+     complexos de porcentagem.
+
+2. Flexbox (Componentes):
+   - O uso em .cabecalho e .navegacao mostra que o Flexbox é o ideal para 
+     alinhar itens em uma única direção (horizontal ou vertical).
+   - justify-content: space-between é a "mágica" para afastar o logo da 
+     navegação automaticamente.
+
+3. Responsividade:
+   - Media Queries (@media): Fundamental para garantir que o site funcione 
+     em dispositivos móveis. A transição de '2fr 1fr' para '1fr' (uma coluna) 
+     é a prática padrão para manter o conteúdo legível em celulares.
+
+4. Box Model (Boa Prática):
+   - O uso de box-sizing: border-box no reset global é a base para não ter 
+     dores de cabeça com padding ou bordas "quebrando" o layout do container.
+*/

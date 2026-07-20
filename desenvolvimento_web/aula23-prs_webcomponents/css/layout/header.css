@@ -1,0 +1,37 @@
+.cabecalho {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--cor-texto);
+  background-color: var(--cor-fundo);
+  position: sticky;
+  /* position sticky fixa o elemento no lugar enquanto rola a página */
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--cor-texto);
+  text-decoration: none;
+}
+
+.navegacao {
+  display: flex;
+  gap: 20px;
+}
+
+.navegacao a {
+  font-family: var(--fonte-ui);
+  font-size: 14px;
+  color: var(--cor-texto);
+  text-decoration: none;
+}
+
+.navegacao a:hover {
+  color: var(--cor-destaque);
+  transition: 0.3s;
+}
