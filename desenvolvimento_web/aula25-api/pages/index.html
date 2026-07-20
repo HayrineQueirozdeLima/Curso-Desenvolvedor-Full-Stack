@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clarim Diário</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/components/site-header.js" defer></script>
+    <script src="../js/components/news-card.js" defer></script>
+    <script src="../js/components/site-footer.js" defer></script>
+  </head>
+  <body>
+    <site-header></site-header>
+
+    <div class="conteudo">
+      <main class="principal">
+        <article class="cartao card--destaque">
+          <span class="categoria">Homem-Aranha</span>
+          <h1 class="card__titulo">Homem-Aranha é visto de máscara!</h1>
+          <p class="card__resumo">
+            Na ponte Manhattan Homem-Aranha é visto batendo em um senhor de 6
+            braços.
+          </p>
+        </article>
+
+        <section class="grade-noticias">
+          <news-card
+            categoria="Economia"
+            titulo="Dólar recua e a bolsa sobe."
+            resumo="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur magnam quisquam repudiandae dolorum corrupti ea dolor cumque nostrum, itaque corporis possimus? Perspiciatis natus ipsam error quae aliquid quo sit vero."
+          ></news-card>
+
+          <news-card
+            categoria="Esportes"
+            titulo="Dólar recua e a bolsa sobe."
+            resumo="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur magnam quisquam repudiandae dolorum corrupti ea dolor cumque nostrum, itaque corporis possimus? Perspiciatis natus ipsam error quae aliquid quo sit vero."
+          ></news-card>
+
+          <news-card
+            categoria="Cultura"
+            titulo="Dólar recua e a bolsa sobe."
+            resumo="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur magnam quisquam repudiandae dolorum corrupti ea dolor cumque nostrum, itaque corporis possimus? Perspiciatis natus ipsam error quae aliquid quo sit vero."
+          ></news-card>
+        </section>
+      </main>
+
+      <aside class="menu-lateral">
+        <div class="caixa">
+          <h3>Mais lidas</h3>
+          <ol>
+            <li>O que muda agora que todos sabem que Billy Butcher morreu?</li>
+            <li>Batman é visto com a Catwoman em telhado</li>
+            <li>Estreando no mundo da moda, Harley Queen destrói o palco</li>
+            <li>Goku revive pela 6 vez</li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+
+    <site-footer></site-footer>
+  </body>
+</html>
+
+<!-- 
+  1. Web Components (Componentização)
+No seu código, tags como <site-header>, <news-card> e <site-footer> 
+não são elementos nativos do HTML. Você está utilizando Web Components.
+
+O conceito: 
+Esta é uma técnica para criar elementos customizados que encapsulam 
+sua própria lógica, estilo e estrutura.
+
+No seu código: 
+Ao declarar <news-card ...></news-card>, você separa a "regra de negócio" 
+(o que um card faz) da "exibição" (o HTML da página).
+
+Vantagem: 
+Se o seu cliente decidir que todos os cards de notícia devem 
+ter bordas mais grossas, você altera em um único arquivo JS 
+(o componente), e todos os cards da página (ou do site inteiro) 
+são atualizados instantaneamente.
+
+2. Metodologia BEM (Block, Element, Modifier)
+Você está utilizando uma convenção de nomes de classe que é o 
+padrão ouro na indústria para organizar CSS, chamada BEM.
+
+Bloco (cartao): 
+É a entidade independente, o componente pai.
+
+Elemento (card__titulo): 
+É uma parte do bloco. Ele depende do bloco para existir. 
+O __ (duplo sublinhado) é o separador.
+
+Modificador (card--destaque): 
+É uma variação do bloco. Ele muda a aparência ou estado. 
+O -- (dois traços) é o separador.
+
+Por que isso é importante?
+Isso cria um código CSS previsível. 
+Você sabe exatamente o que o card--destaque faz: 
+ele pega as propriedades do cartao e as modifica, 
+sem precisar de seletores complexos ou "heranças" c
+onfusas que quebram o layout.
+
+3. Semântica HTML e SEO
+O seu uso das tags <main>, 
+<article>, <section> e <aside>.
+
+O conceito: 
+HTML semântico significa usar as tags 
+que descrevem o significado do conteúdo, 
+não apenas como ele parece.
+
+Impacto:
+
+Acessibilidade: 
+Leitores de tela para pessoas com deficiência 
+visual entendem que o <aside> é um conteúdo 
+secundário e o <main> é o foco principal.
+
+SEO: 
+Robôs de busca (como o Google) 
+priorizam sites com estrutura semântica clara, 
+pois eles conseguem entender o que é o "destaque" 
+(seu <article class="card--destaque">) e o que é o "menu" (seu <aside>).
+
+4. Ciclo de Vida e Performance (Atributo defer)
+No seu <head>, você carregou os scripts com defer:
+<script src="../js/components/news-card.js" defer></script>
+
+O conceito: 
+Sem o defer, o navegador para de ler o HTML (o "render blocking") 
+assim que encontra uma tag <script> para baixar e executar o arquivo.
+
+O ganho: 
+O defer instrui o navegador a baixar o arquivo em segundo 
+plano e executá-lo apenas após o HTML estar totalmente 
+parseado. Isso garante que, quando o seu JavaScript tentar 
+"montar" o componente, o elemento <news-card> já exista na 
+página, evitando erros de "elemento não encontrado".
+-->
