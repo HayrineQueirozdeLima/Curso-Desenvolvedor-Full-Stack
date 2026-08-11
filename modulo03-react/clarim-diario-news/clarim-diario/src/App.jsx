@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./pages/home/Home";
+import Materia from "./pages/materia/Materia";
 import "./styles/App.css";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/materia/:id" element={<Materia />} />
       </Routes>
     </>
   );
