@@ -1,13 +1,29 @@
+/* :root é o elemento mais "alto" da árvore do documento (equivalente a <html>,
+   mas com prioridade maior em CSS). Variáveis (custom properties) definidas
+   aqui ficam disponíveis para QUALQUER elemento da página, em qualquer
+   arquivo CSS, através de var(--nome-da-variavel). */
 :root {
-  --tinta: #111;
-  --papel: #f7f4ec;
-  --urgente: #b3001b;
-  --cinza-legenda: #5d5a52;
+  /* Paleta do tema "claro" (padrão) */
+  --tinta: #111; /* cor do texto principal, como tinta de jornal */
+  --papel: #f7f4ec; /* cor de fundo, como papel jornal levemente amarelado */
+  --urgente: #b3001b; /* vermelho de destaque (categorias, links em hover) */
+  --cinza-legenda: #5d5a52; /* cinza para textos secundários/legendas */
 
+  /* Famílias de fonte reutilizadas em vários componentes.
+     Sempre com fontes "de fallback" depois da preferida, caso a primeira
+     não esteja disponível no dispositivo do usuário. */
   --fonte-manchete: georgia, "Times New Roman", serif;
   --fonte-ui: Arial, Helvetica, sans-serif;
 }
 
+/* Este seletor de atributo [data-theme="dark"] combina com QUALQUER elemento
+   que tenha o atributo data-theme="dark" — no caso deste projeto, é a tag
+   <html>, porque o App.jsx faz:
+     document.documentElement.setAttribute("data-theme", tema)
+   Quando isso acontece, as variáveis abaixo SOBRESCREVEM as de :root para
+   todos os elementos dentro de <html> (ou seja, a página inteira), trocando
+   a paleta de cores sem precisar duplicar nenhum outro CSS — todo o resto
+   do projeto continua usando var(--tinta), var(--papel), etc. normalmente. */
 [data-theme="dark"] {
   --tinta: #e8e4d8;
   --papel: #191817;

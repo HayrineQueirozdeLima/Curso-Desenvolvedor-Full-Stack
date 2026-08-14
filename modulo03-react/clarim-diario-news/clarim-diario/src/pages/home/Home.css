@@ -1,8 +1,15 @@
+/* Estilo extra aplicado à seção de destaque (a "manchete" do dia).
+   Repare que aqui a gente estiliza o MESMO .card do NewsCard, mas só
+   quando ele está dentro de .manchete — é assim que se reaproveita um
+   componente visualmente diferente em contextos diferentes, sem duplicar
+   a estrutura JSX. */
 .manchete {
   margin: 24px 0;
 }
 
 .manchete .card {
+  /* Seletor descendente: ".manchete .card" só afeta um .card que esteja
+     DENTRO de um elemento .manchete — o card normal da grade não é afetado */
   border-width: 3px;
   padding: 32px;
 }
@@ -13,7 +20,13 @@
 
 .grade {
   display: grid;
+  /* CSS Grid responsivo sem media query:
+     - repeat(auto-fit, ...) cria quantas colunas couberem no espaço disponível
+     - minmax(240px, 1fr) diz que cada coluna tem no mínimo 240px e, se
+       sobrar espaço, todas crescem igualmente (1fr = 1 fração do espaço livre)
+     Resultado: em telas largas aparecem várias colunas lado a lado; em telas
+     estreitas, o grid "quebra" automaticamente para menos colunas (ou 1). */
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
+  gap: 16px; /* espaço entre os cards, tanto na horizontal quanto na vertical */
   margin-bottom: 32px;
 }

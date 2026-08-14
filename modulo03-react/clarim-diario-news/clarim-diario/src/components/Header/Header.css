@@ -1,13 +1,18 @@
+/* Convenção de nomenclatura usada neste projeto: BEM (Bloco__Elemento).
+   ".cabecalho" é o BLOCO (componente), e classes como ".cabecalho__faixa"
+   são ELEMENTOS que só fazem sentido dentro desse bloco. Isso evita que o
+   CSS de um componente "vaze" e afete outros por engano, mesmo sem usar
+   CSS Modules. */
 .cabecalho {
-  border-bottom: 4px double var(--tinta);
+  border-bottom: 4px double var(--tinta); /* linha dupla, como em jornais impressos */
   padding: 12px 16px 0;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto; /* centraliza o cabeçalho na página */
 }
 
 .cabecalho__faixa {
-  display: flex;
-  justify-content: space-between;
+  display: flex; /* Flexbox: alinha os itens (span, span, span, button) numa linha */
+  justify-content: space-between; /* empurra o 1º item pra esquerda e o último pra direita, distribuindo o espaço entre eles */
   font-family: var(--fonte-ui);
   font-size: 12px;
   text-transform: uppercase;
@@ -18,6 +23,10 @@
 .cabecalho__titulo {
   text-align: center;
   font-style: italic;
+  /* clamp(mínimo, preferido, máximo): o tamanho da fonte varia com a largura
+     da tela (8vw = 8% da viewport width), mas nunca fica menor que 40px nem
+     maior que 84px. É uma forma de tipografia responsiva sem precisar de
+     várias media queries diferentes. */
   font-size: clamp(40px, 8vw, 84px);
   letter-spacing: 2px;
   margin: 10px 0 2px;
@@ -33,8 +42,8 @@
 
 .cabecalho__menu {
   display: flex;
-  justify-content: center;
-  gap: 28px;
+  justify-content: center; /* centraliza os links do menu horizontalmente */
+  gap: 28px; /* espaçamento entre os links, sem precisar de margin em cada <a> */
   border-top: 1px solid var(--tinta);
   padding: 10px 0;
 }
@@ -45,21 +54,27 @@
   font-weight: bold;
   text-transform: uppercase;
   color: var(--tinta);
-  text-decoration: none;
+  text-decoration: none; /* remove o sublinhado padrão dos links */
   /* border-bottom: 4px solid var(--tinta); */
+  /* ^ regra desativada (comentada) — provavelmente um estilo alternativo
+     que estava sendo testado para os links do menu. Fica aqui como exemplo
+     de que comentar código é uma forma comum de "guardar" uma ideia sem
+     apagar, para testar depois. */
 }
 
 .cabecalho__menu a:hover {
+  /* :hover é uma pseudo-classe: aplica o estilo só quando o mouse está
+     sobre o elemento */
   color: var(--urgente);
 }
 
 .cabecalho__tema {
   font-family: var(--fonte-ui);
   font-size: 12px;
-  background: none;
+  background: none; /* remove o fundo padrão de botão do navegador */
   border: 1px solid var(--tinta);
   color: var(--tinta);
   padding: 3px 10px;
   border-radius: 8px;
-  cursor: pointer;
+  cursor: pointer; /* indica visualmente que o elemento é clicável */
 }

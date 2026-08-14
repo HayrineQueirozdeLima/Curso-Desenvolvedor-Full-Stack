@@ -1,3 +1,7 @@
+/* Um "CSS reset" mínimo: o seletor universal "*" aplica a regra a TODOS os
+   elementos da página. Aqui removemos margens/paddings padrão que cada
+   navegador define de um jeito diferente, para começar do zero e evitar
+   inconsistências entre navegadores. */
 * {
   margin: 0;
   padding: 0;
@@ -6,20 +10,33 @@
   que faz com que a largura e altura 
   de um elemento incluam o padding e 
   a borda */
+  /* Na prática: sem border-box, se você definir width: 200px e depois
+     adicionar padding: 20px, o elemento fica com 240px de largura total
+     (200 + 20 + 20). Com border-box, ele continua com 200px no total,
+     e o padding "come" espaço de dentro — muito mais previsível para
+     montar layouts. */
 }
 
+/* Estilos base aplicados ao <body>, herdados por praticamente todo o
+   conteúdo da página (fonte, cor de texto, espaçamento entre linhas). */
 body {
   font-family: var(--fonte-manchete);
   background: var(--papel);
   color: var(--tinta);
   line-height: 1.6;
+  /* "transition" aqui faz a MUDANÇA de background e color acontecer de
+     forma suave (0.3s) em vez de instantânea — é o que dá aquele efeito de
+     "fade" quando você clica no botão de trocar tema claro/escuro. */
   transition:
     background 0.3s,
     color 0.3s;
 }
 
+/* Classe utilitária usada em várias páginas (Home, Materia) para centralizar
+   o conteúdo e limitar a largura máxima, criando aquelas "margens" laterais
+   típicas de sites de notícia. */
 .container {
   max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 16px;
+  margin: 0 auto; /* margem automática nos lados = centraliza horizontalmente */
+  padding: 0 16px; /* respiro nas laterais em telas pequenas */
 }
