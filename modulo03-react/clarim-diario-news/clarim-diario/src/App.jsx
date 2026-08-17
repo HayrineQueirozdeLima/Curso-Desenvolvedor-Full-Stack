@@ -11,6 +11,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./pages/home/Home";
 import Materia from "./pages/materia/Materia";
+import Cadastro from "./pages/cadastro/Cadastro";
 import "./styles/App.css";
 
 // Componente raiz da aplicação. É aqui que ficam as coisas "globais":
@@ -66,6 +67,7 @@ function App() {
             O valor depois de "materia/" fica disponível dentro do componente
             Materia através do hook useParams(). */}
         <Route path="/materia/:id" element={<Materia />} />
+        <Route path="/cadastro" element={<Cadastro />} />
       </Routes>
     </>
   );
