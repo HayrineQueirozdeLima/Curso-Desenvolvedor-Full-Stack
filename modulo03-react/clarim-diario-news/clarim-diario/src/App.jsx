@@ -1,3 +1,7 @@
+// ============================================================
+//   COMPONENTE RAIZ — monta o layout e decide QUAL página mostrar
+// ============================================================
+
 // Hooks do React:
 // useState -> guarda um valor que, quando muda, faz o componente renderizar de novo
 // useEffect -> roda um "efeito colateral" (algo fora do fluxo normal de render, como
@@ -8,11 +12,11 @@ import { useState, useEffect } from "react";
 // (componente) mostrar de acordo com a URL atual do navegador
 import { Routes, Route } from "react-router-dom";
 
-import Header from "./components/Header/Header";
-import Home from "./pages/home/Home";
-import Materia from "./pages/materia/Materia";
-import Cadastro from "./pages/cadastro/Cadastro";
-import "./styles/App.css";
+import Header from "../components/Header/Header.jsx";
+import Home from "../pages/Home/Home.jsx";
+import Materia from "../pages/Materia/Materia.jsx";
+import Cadastro from "../pages/Cadastro/Cadastro.jsx";
+import "../styles/App.css";
 
 // Componente raiz da aplicação. É aqui que ficam as coisas "globais":
 // o cabeçalho (Header) e o sistema de rotas (qual página mostrar).

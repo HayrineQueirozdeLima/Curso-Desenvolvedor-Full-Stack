@@ -31,7 +31,7 @@ function Header({ tema, aoAlternarTema }) {
         <button className="cabecalho__tema" onClick={aoAlternarTema}>
           {/* Operador ternário: se o tema atual for "light", mostra "Escuro"
               (ou seja, o texto indica para ONDE o clique vai levar) */}
-          {tema === "light" ? "Escuro" : "Claro"}
+          {tema === "light" ? "🌙 Escuro" : "☀️ Claro"}
         </button>
       </div>
 
