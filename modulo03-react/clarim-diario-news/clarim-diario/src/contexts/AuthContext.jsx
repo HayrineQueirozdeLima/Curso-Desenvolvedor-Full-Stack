@@ -19,7 +19,21 @@ export function AuthProvider({children}){
     }
 
     function logout() {
-    setUsuario(null);
-    localStorage.removeItem("usuario");
-  }
+        setUsuario(null);
+        localStorage.removeItem("usuario");
+    }
+
+    return (
+        <AuthContext.Provider value={{usuario, login, logout}}>
+            {children}
+        </AuthContext.Provider>
+    )
+}
+
+export function useAuth(){
+    const context = useContext(AuthContext);
+    if (!context){
+        throw new Error("useAuth deve ser udado dentro de AuthProvider");
+    } 
+    return context;
 }
