@@ -26,14 +26,13 @@ function App() {
   // é útil aqui porque ler o localStorage é um pouco mais "caro" do que ler uma variável comum.
   const [tema, setTema] = useState(() => {
     // Tenta recuperar um tema salvo de uma visita anterior
-    const salvo = localStorage.getItem("tema") || "light";
-    if (salvo) return salvo;
+    const salvo = localStorage.getItem("tema");
 
+    if (salvo) return salvo;
     const preferenciaEscuro = window.matchMedia(
-      "(prefers-color-scheme: dark)",
+      "(prefers-color-scheme: dark)"
     ).matches;
-    if (preferenciaEscuro) return "dark";
-    return "light";
+    return preferenciaEscuro ? "dark" : "light";
   });
 
   // Função que alterna entre "light" e "dark".
@@ -72,6 +71,7 @@ function App() {
             Materia através do hook useParams(). */}
         <Route path="/materia/:id" element={<Materia />} />
         <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </>
   );
