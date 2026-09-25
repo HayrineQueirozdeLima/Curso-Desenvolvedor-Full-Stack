@@ -16,6 +16,7 @@ import Header from "./components/Header/Header.jsx";
 import Home from "./pages/Home/Home.jsx";
 import Materia from "./pages/Materia/Materia.jsx";
 import Cadastro from "./pages/Cadastro/Cadastro.jsx";
+import Login from "./pages/Login/Login.jsx"
 import "../src/App.css";
 
 // Componente raiz da aplicação. É aqui que ficam as coisas "globais":
